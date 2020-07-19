@@ -1,0 +1,31 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Listes des equipes</h2>
+    </div>
+    
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Identifiant</th>
+            <th>Pays</th>
+            <th>Drapeau</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of employees | async">
+            <td>{{employee.id}}</td>
+            <td>{{employee.pays}}</td>
+            <td><img src="{{employee.drapeau}}" width="100" height="100"></td>
+            
+            <td>
+              <button (click)="deleteEmployee(employee.id)" class="btn btn-danger">Delete</button>
+              <button (click)="employeeDetails(employee.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+              <button (click)="gotoListUpdate(employee.id)" class="btn btn-success" style="margin-left: 10px">Update</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

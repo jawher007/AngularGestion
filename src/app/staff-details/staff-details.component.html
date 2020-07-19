@@ -1,0 +1,18 @@
+<h2>staff Details</h2> 
+
+<hr/>
+<div *ngIf="staff">
+  <div>
+    <label><b>Identifiant Name: </b></label> {{staff.id}}
+  </div>
+  <div>
+    <label><b>nom: </b></label> {{staff.nom}}
+  </div>
+  <div>
+    <label><b>pays: </b></label> {{staff.equipe.pays}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to staff List</button><br>

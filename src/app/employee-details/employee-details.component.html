@@ -1,0 +1,24 @@
+<h2>Equipe details</h2> 
+
+<hr/>
+<div *ngIf="employee">
+  <div>
+    <label><b>Identifiant </b></label> {{employee.id}}
+  </div>
+  <br>
+  <br>
+  <br>
+  <div>
+    <img src="{{employee.drapeau}}" width="100" height="100">
+  </div>
+  <br>
+  <br>
+  <br>
+  <div>
+    <label><b>Pays </b></label> {{employee.pays}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to List d'equipes</button><br>

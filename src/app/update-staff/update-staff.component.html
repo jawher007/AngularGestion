@@ -1,0 +1,21 @@
+<h3>Update staff</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    
+    <div class="form-group">
+      <label for="name">nom staff</label>
+      <input type="text" class="form-control" id="lastName" required [(ngModel)]="staff.nom" name="nom">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Identifiant d'equipe</label>
+      <select name="equipe_id" [(ngModel)]="equipe_id"(change)="selected()" >
+        
+        <option *ngFor="let employee of employees | async"  [value]="employee.id" >{{employee.pays}}</option>
+              </select>
+              
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
